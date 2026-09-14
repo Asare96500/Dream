@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+:root{
+    --low-white: rgba(255,255,255,0.1);
+}
 html,body{
     height: 100%;
     width: 100%;
@@ -12,7 +15,7 @@ body{
     flex-direction: column;
 }
 header{
-    background:rgba(255,255,255,0.1);
+    background:var(--low-white);
     position: absolute;
     top: 0;
     left: 0;
@@ -26,11 +29,11 @@ header{
     justify-content: space-between;
     color: rgba(255,255,255,0.8);
     padding: 0.5rem 1rem;
-    z-index: 1;
-    
-
+    z-index: 2
 }
-
+header h1{
+    cursor: pointer;
+}
 .logo{
     width: 50px;
     opacity: 0.9;
@@ -51,7 +54,7 @@ nav a {
     font-weight: 600;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 nav a:hover{
     background: rgba(255,255,255,0.5);
@@ -86,10 +89,11 @@ nav a:hover{
     95vw 15vh #fff,
     50vw 35vh #fff,
     70vw 10vh #fff;
+    
 }
 
 .stars-large{
-        position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 2px;
@@ -103,14 +107,23 @@ nav a:hover{
     85vw 40vh #fff,
     30vw 90vh #fff,
     10vw 80vh #fff,
-    78vw 68vh #fff;
+    78vw 68vh #fff,
+    90vw 10vh #fff,
+    15vw 45vh #fff,
+    70vw 30vh #fff,
+    53vw 78vh #fff,
+    92vw 75vh #fff;
+    animation: twinkle 3s ease-in-out infinite alternate;
 }
-.model{
-    width: 40%;
-    margin-top: 200px;
-    position: absolute;
-    bottom: 0;
-    left: 3rem;
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2;
+    }
+
+    50%{
+        opacity: 1;
+    }
 }
 
 .cursor-light{
@@ -123,23 +136,69 @@ nav a:hover{
     z-index: 0;
 
 }
+.cursor-light.hidden{
+    display: none;
+}
+.cursor-toggle{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 0.5rem;
+    color: #fff;
+    margin: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.2); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color :rgba(255,255,255,0.1);
+    transition: 0.3 ease;
+}
+.cursor-toggle svg path {
+    fill: rgb(255, 255, 255, 0.8);
+    transition: 0.3s ease;
+}
+/*Active*/
+.cursor-toggle.active{
+    background-color: rgb(255, 255, 255, 0.7);
+}
+.cursor-toggle.active svg path {
+    fill: rgba(9, 19, 58,0.8) ;
+}
+
+
 main{
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: right;   
 }
-
+.img-section{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.model{
+    width: 80%;
+    z-index: 1;
+    user-select: none;
+    
+}
 .content-section{
-    color: #f0f0f0;
-    /* border: 1px solid; */
-    margin-right: 2rem;
+    color: #f0f0f0; 
     gap: 2rem;
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
+    box-sizing: border-box;
+    padding-top: 8%;
+
 }
 
 .content-section h1{
