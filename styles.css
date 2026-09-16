@@ -6,8 +6,10 @@
     --low-white: rgba(255,255,255,0.1);
 }
 html,body{
-    height: 100%;
+    height: 100vh;
+    height: 100dvh;
     width: 100%;
+    overflow: hidden;
 }
 body{
     font-family: system-ui,sans-serif;
@@ -29,11 +31,10 @@ header{
     justify-content: space-between;
     color: rgba(255,255,255,0.8);
     padding: 0.5rem 1rem;
-    z-index: 2
+    z-index: 10;
+    flex-shrink: 0;
 }
-header h1{
-    cursor: pointer;
-}
+
 .logo{
     width: 50px;
     opacity: 0.9;
@@ -43,12 +44,14 @@ header h1{
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    cursor: pointer;
 }
 nav{
 display: flex;
 gap: 1rem;
 }
 nav a {
+    position: relative;
     color: rgba(255,255,255,0.8);
     text-decoration: none;
     font-weight: 600;
@@ -56,17 +59,75 @@ nav a {
     border-radius: 0.5rem;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0.75rem;
+    right: 0.75rem;
+    height: 3px;
+    background-color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.8);
+    border-radius: 2px;
+}
 nav a:hover{
     background: rgba(255,255,255,0.5);
     color: rgba(3, 4, 18, 0.9);
 }
 
 .sky{
+   background: linear-gradient(180deg, #030412 0%, #09133a 35%, #0b2e6b 70%, #0c61a5 100%); 
     width: 100%;
+    border: 3px solid black;
+    height: 100vh;  
+    height: 100dvh;
+    overflow: hidden;
+}
+.slide-track{
+    display: flex;
+    width: 300%;
     height: 100%;
-    background: linear-gradient(180deg, #030412 0%, #09133a 35%, #0b2e6b 70%, #0c61a5 100%);
+    transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.hero-section,
+.products-section,
+.about-section {
+    flex: 0 0 33.3333%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 33.3333%;
+    height: 100%;
+}
+.hero-section{
+    justify-content:space-around;
+    padding-top: 5rem;
     
 }
+.products-section{
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.about-section{
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+
+.sky[data-plane="home"] .slide-track{
+    transform: translateX(0%);
+}
+
+.sky[data-plane="products"] .slide-track{
+    transform: translateX(-33.3333%);
+}
+
+.sky[data-plane="about"] .slide-track{
+    transform: translateX(-66.6666%);
+}
+
 .stars-small{
     position: absolute;
     top: 0;
@@ -154,6 +215,7 @@ nav a:hover{
     justify-content: center;
     background-color :rgba(255,255,255,0.1);
     transition: 0.3 ease;
+    z-index: 10;
 }
 .cursor-toggle svg path {
     fill: rgb(255, 255, 255, 0.8);
@@ -168,12 +230,7 @@ nav a:hover{
 }
 
 
-main{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: right;   
-}
+
 .img-section{
     width: 50%;
     height: 100%;
@@ -197,7 +254,6 @@ main{
     justify-content:center;
     align-items: center;
     box-sizing: border-box;
-    padding-top: 8%;
 
 }
 

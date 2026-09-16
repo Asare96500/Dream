@@ -13,12 +13,13 @@
             <h1>Dream</h1>
             </div>
             <nav>
-                <a href="#">Products</a>
-                <a href="#">About</a>
+                <a href="#" id="home-link">Home</a>
+                <a href="#" id="products-link">Products</a>
+                <a href="#" id="about-link">About</a>
             </nav>
     </header>
     
-    <main class="sky">
+    <main class="sky" data-plane="home">
         <div class="stars-small"></div>
         <div class="stars-large"></div>
 
@@ -29,15 +30,32 @@
  d="M241.020,154.500 L194.980,201.500 L195.000,201.500 L195.000,455.500 C195.000,466.546 186.046,475.500 174.1000,475.500 L74.1000,475.500 C63.954,475.500 55.000,466.546 55.000,455.500 L55.000,202.500 L2.102,154.500 L-0.000,154.500 L-0.000,64.500 C-0.000,53.454 8.954,44.500 20.000,44.500 L222.1000,44.500 C234.046,44.500 243.000,53.454 243.000,64.500 L243.000,154.500 L241.020,154.500 ZM124.1000,268.000 C116.716,268.000 110.000,274.716 110.000,283.000 C110.000,291.284 116.716,297.1000 124.1000,297.1000 C133.284,297.1000 139.1000,291.284 139.1000,283.000 C139.1000,274.716 133.284,268.000 124.1000,268.000 ZM226.1000,29.1000 C218.716,29.1000 212.000,23.284 212.000,14.1000 C212.000,6.716 218.716,0.000 226.1000,0.000 C235.284,0.000 242.000,6.716 242.000,14.1000 C242.000,23.284 235.284,29.1000 226.1000,29.1000 ZM121.1000,29.1000 C113.716,29.1000 107.000,23.284 107.000,14.1000 C107.000,6.716 113.716,0.000 121.1000,0.000 C130.284,0.000 136.1000,6.716 136.1000,14.1000 C136.1000,23.284 130.284,29.1000 121.1000,29.1000 ZM16.000,29.1000 C7.716,29.1000 0.1000,23.284 0.1000,14.1000 C0.1000,6.716 7.716,0.000 16.000,0.000 C24.284,0.000 30.1000,6.716 30.1000,14.1000 C30.1000,23.284 24.284,29.1000 16.000,29.1000 Z"/>
 </svg>
         </div>
-        <div class='img-section'>
-            <img class="model" src="assests/pic.png" draggable="false" alt="model">
-        </div>
 
-        <div class="content-section">
-            <h1>A Scent Beyond <br> Imagination</h1>
-            <p>Discover a fragrance from rare florals 🌸<br> crafted for moments that linger forever</p>
-            <a href="#" class="explore-btn"><span>Explore</span></a>
-        </div>
+    <!--tracker-->
+    <div class="slide-track">
+        <!--hero section-->
+        <section class="hero-section">
+            <div class='img-section'>
+                <img class="model" src="assests/pic.png" draggable="false" alt="model">
+            </div>
+            <div class="content-section">
+                <h1>A Scent Beyond <br> Imagination</h1>
+                <p>Discover a fragrance from rare florals 🌸<br> crafted for moments that linger forever</p>
+                <a href="#" class="explore-btn"><span>Explore</span></a>
+            </div>
+        </section>
+
+        <!--products section-->
+        <section class="products-section">
+            <h2 style="color:white;">Welcome to Products</h2>
+        </section>
+
+        <!--about section-->
+        <section class="about-section">
+            <h2 style="color:white;">Welcome to about section</h2>
+
+        </section>
+    </div>
     </main>
     
     
