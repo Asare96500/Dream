@@ -1,3 +1,8 @@
+.products-section{
+    div{
+         /* border: 1px solid red; */
+    }
+}
 *{
     padding: 0;
     margin: 0;
@@ -100,14 +105,10 @@ nav a:hover{
     width: 33.3333%;
     height: 100%;
 }
-.hero-section{
+.hero-section {
     justify-content:space-around;
     padding-top: 5rem;
     
-}
-.products-section{
-    justify-content: center;
-    padding-top: 5rem;
 }
 
 .about-section{
@@ -321,4 +322,113 @@ nav a:hover{
 
 .explore-btn:hover{
     box-shadow: 0 8px 25px rgba(0,0,0, 0.25);
+}
+
+.products-section {
+    display: grid;
+    grid-template-columns: 1fr clamp(400px, 45vw, 650px);
+    gap: 2rem;
+    padding-top: 5rem;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2rem;
+    padding-inline: 2rem;
+    box-sizing: border-box;
+    
+}
+.products-section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+    
+
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.2) transparent;
+    
+}
+.products-controls{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex: 1;
+    max-width: 280px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    backdrop-filter: blur(10px);
+}
+.search-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    color: rgba(255,255,255,0.6);
+    flex-shrink: 0;
+}
+
+.search-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.search-input::placeholder {
+    color: rgba(255,255,255,0.45);
+}
+
+.products-filter-btn {
+    background: rgba(255,255,255,0.5);
+    color: #09133a;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.55rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.products-filter-btn:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.5);;
+}
+.products-section-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 0;
+    
+}
+.products-section-preview {
+    width: 100%;
+    height: 80%;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.12) ;
+    backdrop-filter: blur(10px);
+
 }
