@@ -51,12 +51,22 @@
                 <div class="products-controls">
                     <div class="search-box">
                         <!--svg-->
-                        <div class="search-icon">Q</div>
+                        <div class="search-icon"">
+                            <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 473 466">
+<path fill-rule="evenodd"  stroke="rgba(255,255,255,0.8)" stroke-width="50px" stroke-linecap="round" stroke-linejoin="miter" fill="none"
+ d="M126.862,325.883 C126.862,325.883 127.379,328.899 128.914,333.724 C134.774,352.143 155.468,396.921 218.862,400.883 C218.862,400.883 297.862,404.883 319.862,316.883 C319.862,316.883 401.862,316.883 411.862,223.883 C411.862,223.883 413.862,169.883 372.862,141.883 C372.862,141.883 389.862,66.883 325.862,31.883 C325.862,31.883 256.862,-2.117 212.862,44.883 C212.862,44.883 149.862,-13.117 77.862,54.883 C77.862,54.883 40.862,84.883 57.862,151.883 C57.862,151.883 2.862,189.883 26.862,261.883 C26.862,261.883 42.862,330.883 126.862,325.883 Z"/>
+<path fill-rule="evenodd"  stroke="rgba(255,255,255,0.8)" stroke-width="25px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+ d="M333.063,312.351 L318.921,326.493 L436.301,443.873 L450.443,429.731 L333.063,312.351 Z"/>
+</svg>
+
+                        </div>
                         <input type="text" placeholder="Search products..." class="search-input"/>
                     </div>
                     <button class="products-filter-btn">Filter</button>
                     </div>
-                    <div class="cards-wrapper">
+                    <div class="cards-wrapper" id="cards-wrapper">
                         <h1 style="color: white;">Cards go here</h1>
                     </div>
                 
@@ -64,15 +74,59 @@
 
             <aside class="products-section-sidebar">
                 <div class="products-section-view">
-                    <h1 style="color:white;">Active item details</h1>
+                    <div class="active-item-card" aria-live="polite">
+                        <div class="active-item-image-wrap">
+                            <img id="active-item-image" class="active-item-image" src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=900&q=80" alt="Velvet Oud">
+                            <div class="active-item-overlay"></div>
+                            <div class="active-item-content">
+                                <div class="active-item-badge" id="active-item-category">Signature Scent</div>
+                                <h2 id="active-item-name">Velvet Oud</h2>
+                                <div class="active-item-meta">
+                                    <span class="active-item-rating">★ <span id="active-item-rating">4.8</span></span>
+                                    <span class="active-item-separator">•</span>
+                                    <span class="active-item-details">Warm · Floral</span>
+                                </div>
+                                <p id="active-item-description">A rich blend of velvet florals and warm woods, crafted for lingering evening impressions.</p>
+                                <button class="active-item-btn" type="button">Add to Collection</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </aside>
         </section>
 
         <!--about section-->
         <section class="about-section">
-            <h2 style="color:white;">Welcome to about section</h2>
+            <div class="about-layout">
+                <div class="about-copy">
+                    <h2>About</h2>
+                    <p>Welcome to Dream— an interactive web interface design concept crafted to explore modern UI, smooth card interactions, and aesthetic fragrance branding. Built purely as a design showcase and personal project. Feel free to click around, explore the product notes, and test out the features.</p>
 
+                    <div class="social-links" aria-label="Social links">
+                        <a class="social-link" href="https://github.com/Asare96500" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                          <img src="/assests/github.svg" alt="github_logo">
+                        </a>
+                        <a class="social-link" href="https://www.linkedin.com/in/asare-darkwa-44187a396" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <img src="/assests/linkedin.svg" alt="linkedin_logo">
+                        </a>
+                        <a class="social-link" href="https://pin.it/4a6GQlz4g" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                            <img src="/assests/pinterest.svg" alt="pinterest_logo">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-gallery" aria-label="Perfume product gallery">
+                    <div class="about-card about-card-left">
+                        <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=800&q=80" alt="Amber perfume bottle" loading="lazy">
+                    </div>
+                    <div class="about-card about-card-center">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=80" alt="Rose perfume bottle" loading="lazy">
+                    </div>
+                    <div class="about-card about-card-right">
+                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="Dark luxury perfume bottle" loading="lazy">
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     </main>
