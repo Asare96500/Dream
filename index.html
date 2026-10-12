@@ -8,15 +8,20 @@
 </head>
 <body>
     <header>
-            <div class="logo-brand">
-            <img src="assests/AK.png" class="logo" alt="logo">
+        <div class="logo-brand">
+            <img src="assests/dream_logo.svg" class="logo" alt="">
             <h1>Dream</h1>
-            </div>
-            <nav>
-                <a href="#" id="home-link">Home</a>
-                <a href="#" id="products-link">Products</a>
-                <a href="#" id="about-link">About</a>
-            </nav>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="primary-navigation" aria-label="Main navigation">
+            <a href="#" id="home-link">Home</a>
+            <a href="#" id="products-link">Products</a>
+            <a href="#" id="about-link">About</a>
+        </nav>
     </header>
     
     <main class="sky" data-plane="home">
@@ -36,7 +41,7 @@
         <!--hero section-->
         <section class="hero-section">
             <div class='img-section'>
-                <img class="model" src="assests/pic.png" draggable="false" alt="model">
+                <img class="model" src="assests/pic.webp" draggable="false" alt="model">
             </div>
             <div class="content-section">
                 <h1>A Scent Beyond <br> Imagination</h1>
@@ -72,23 +77,21 @@
                 
             </main>
 
-            <aside class="products-section-sidebar">
+            <aside class="products-section-sidebar" aria-label="Selected product details">
                 <div class="products-section-view">
                     <div class="active-item-card" aria-live="polite">
                         <div class="active-item-image-wrap">
-                            <img id="active-item-image" class="active-item-image" src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=900&q=80" alt="Velvet Oud">
-                            <div class="active-item-overlay"></div>
-                            <div class="active-item-content">
-                                <div class="active-item-badge" id="active-item-category">Signature Scent</div>
-                                <h2 id="active-item-name">Velvet Oud</h2>
-                                <div class="active-item-meta">
-                                    <span class="active-item-rating">★ <span id="active-item-rating">4.8</span></span>
-                                    <span class="active-item-separator">•</span>
-                                    <span class="active-item-details">Warm · Floral</span>
-                                </div>
-                                <p id="active-item-description">A rich blend of velvet florals and warm woods, crafted for lingering evening impressions.</p>
-                                <button class="active-item-btn" type="button">Add to Collection</button>
+                            <img id="active-item-image" class="active-item-image" src="assests/Products/1.webp" alt="Velvet Oud">
+                            <button class="active-item-close" type="button" aria-label="Close product details">×</button>
+                        </div>
+                        <div class="active-item-content">
+                            <h2 id="active-item-name">Velvet Oud</h2>
+                            <div class="active-item-meta">
+                                <span class="active-item-rating">★ <span id="active-item-rating">4.8</span></span>
+                                <span class="active-item-separator">•</span>
+                                <span id="active-item-details" class="active-item-details">Warm · Floral</span>
                             </div>
+                            <p id="active-item-description">A rich blend of velvet florals and warm woods, crafted for lingering evening impressions.</p>
                         </div>
                     </div>
                 </div>
@@ -100,7 +103,7 @@
             <div class="about-layout">
                 <div class="about-copy">
                     <h2>About</h2>
-                    <p>Welcome to Dream— an interactive web interface design concept crafted to explore modern UI, smooth card interactions, and aesthetic fragrance branding. Built purely as a design showcase and personal project. Feel free to click around, explore the product notes, and test out the features.</p>
+                    <p>Welcome to Dream— an interactive web interface design concept crafted to explore modern UI, smooth card interactions, and aesthetic fragrance branding. Built purely as a design showcase and personal project. Feel free to click around, explore the product notes, and test out the features. Designed & developed by Asare Kwadwo Darkwa. Connect with me below!</p>
 
                     <div class="social-links" aria-label="Social links">
                         <a class="social-link" href="https://github.com/Asare96500" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -117,13 +120,13 @@
 
                 <div class="about-gallery" aria-label="Perfume product gallery">
                     <div class="about-card about-card-left">
-                        <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=800&q=80" alt="Amber perfume bottle" loading="lazy">
+                        <img src="/assests/1.webp" alt="Amber perfume bottle" loading="lazy">
                     </div>
                     <div class="about-card about-card-center">
-                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=80" alt="Rose perfume bottle" loading="lazy">
+                        <img src="/assests/2.webp" alt="Rose perfume bottle" loading="lazy">
                     </div>
                     <div class="about-card about-card-right">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="Dark luxury perfume bottle" loading="lazy">
+                        <img src="/assests/3.webp" alt="Dark luxury perfume bottle" loading="lazy">
                     </div>
                 </div>
             </div>
